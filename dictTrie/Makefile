@@ -15,9 +15,9 @@ CXXFLAGS=-std=c++11 -g
 spellcheck : dictionary.o spellcheck.o
 	$(CXX) $(CXXFLAGS) -o dictionary $^
 
-dictionary.o : dictionary.h dictionary.C
+dictionary.o : dictionary.h dictionary.cpp
 
-spellcheck.o : dictionary.h spellcheck.C
+spellcheck.o : dictionary.h spellcheck.cpp
 
 clean :
 	rm *.o
